@@ -2,7 +2,7 @@
 . /opt/farm/scripts/init
 
 
-if [ ! -d /opt/farm/ext/repos/lists/$OSVER ] || [ "$OSTYPE" = "suse" ] || [ "$OSTYPE" = "qnap" ]; then
+if [ ! -d /opt/farm/ext/farm-roles/lists/$OSVER ] || [ "$OSTYPE" = "suse" ] || [ "$OSTYPE" = "qnap" ]; then
 	echo "skipping syslog configuration, unsupported system version"
 elif [ "$SYSLOG" != "true" ]; then
 	/opt/farm/scripts/setup/extension.sh sf-log-forwarder
